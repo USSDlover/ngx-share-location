@@ -1,1 +1,8 @@
-<p>location-image works!</p>
+<input #fileUploader style="visibility: hidden" (change)="onSelectFile($event)" [(ngModel)]="locationImage" type="file" accept="image/*">
+<div class="image-preview">
+  <img [src]="imagePreview" alt="Location image preview">
+</div>
+<button mat-stroked-button (click)="fileUploader.click()">
+  Select Logo
+  <mat-icon>upload</mat-icon>
+</button>

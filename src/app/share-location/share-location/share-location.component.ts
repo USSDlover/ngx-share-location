@@ -6,5 +6,5 @@ import { Component } from '@angular/core';
   styleUrls: ['./share-location.component.scss']
 })
 export class ShareLocationComponent {
-
+  locationName?: string;
 }
