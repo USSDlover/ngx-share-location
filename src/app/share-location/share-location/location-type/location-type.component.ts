@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 
 @Component({
   selector: 'app-location-type',
@@ -6,5 +6,21 @@ import { Component } from '@angular/core';
   styleUrls: ['./location-type.component.scss']
 })
 export class LocationTypeComponent {
+  @Input() selectedLocationType?: string;
+  @Output() selectedLocationTypeChange = new EventEmitter<string>();
 
+  businessTypes: {title: string; value: string}[] = [
+    {
+      title: 'Retail Sales',
+      value: 'retail_sales'
+    },
+    {
+      title: 'Online Business',
+      value: 'online_business'
+    },
+    {
+      title: 'AC & Heating',
+      value: 'ac_and_heating'
+    }
+  ]
 }

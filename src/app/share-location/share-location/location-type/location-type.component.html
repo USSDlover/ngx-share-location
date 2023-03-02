@@ -1,1 +1,11 @@
-<p>location-type works!</p>
+<mat-form-field appearance="outline">
+  <mat-label>Select location type</mat-label>
+  <mat-select (valueChange)="selectedLocationTypeChange.emit($event)" [value]="selectedLocationType">
+    <mat-option>None</mat-option>
+    <ng-container *ngFor="let business of businessTypes">
+      <mat-option [value]="business.value">
+        {{business.title}}
+      </mat-option>
+    </ng-container>
+  </mat-select>
+</mat-form-field>

@@ -6,6 +6,7 @@ import { LocationTypeComponent } from './share-location/location-type/location-t
 import { LocationImageComponent } from './share-location/location-image/location-image.component';
 import { MatCardModule } from '@angular/material/card';
 import { MatInputModule } from '@angular/material/input';
+import { MatSelectModule } from '@angular/material/select';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { MatInputModule } from '@angular/material/input';
   imports: [
     CommonModule,
     MatCardModule,
-    MatInputModule
+    MatInputModule,
+    MatSelectModule
   ]
 })
 export class ShareLocationModule { }
