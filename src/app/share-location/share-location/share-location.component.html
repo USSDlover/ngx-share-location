@@ -3,15 +3,17 @@
     Share Location
   </mat-card-title>
   <mat-card-content>
-    <mat-form-field appearance="outline">
-      <mat-label>
-        Location name:
-      </mat-label>
-      <input [(ngModel)]="locationName" matInput />
-    </mat-form-field>
-    <app-location-map></app-location-map>
-    <app-location-type></app-location-type>
+    <div class="location-name-type">
+      <mat-form-field appearance="outline">
+        <mat-label>
+          Location name:
+        </mat-label>
+        <input [(ngModel)]="locationName" matInput />
+      </mat-form-field>
+      <app-location-type></app-location-type>
+    </div>
     <app-location-image></app-location-image>
+    <app-location-map></app-location-map>
   </mat-card-content>
   <mat-card-actions>
     <button mat-raised-button>

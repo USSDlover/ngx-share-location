@@ -9,7 +9,7 @@ export class LocationImageComponent {
   @Input() locationImage?: string;
   @Output() locationImageChange = new EventEmitter<string>();
 
-  imagePreview = 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTIn2-2aN3Dhsv4KqmUo32Yi6oal0wy3JLDSuVBAcfqMGRz2ZwDe_YP5UMmkP1igMVx4-E&usqp=CAU';
+  imagePreview = 'https://www.shutterstock.com/image-vector/simple-image-generator-placeholder-service-260nw-2224999997.jpg';
 
   onSelectFile(event: Event): void {
     let file: File | null = (event.target as HTMLInputElement).files!.item(0);

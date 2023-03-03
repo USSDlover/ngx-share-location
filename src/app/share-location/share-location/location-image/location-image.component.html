@@ -1,4 +1,4 @@
-<input #fileUploader style="visibility: hidden" (change)="onSelectFile($event)" [(ngModel)]="locationImage" type="file" accept="image/*">
+<input #fileUploader style="visibility: hidden; position: absolute; z-index: -1;" (change)="onSelectFile($event)" [(ngModel)]="locationImage" type="file" accept="image/*">
 <div class="image-preview">
   <img [src]="imagePreview" alt="Location image preview">
 </div>

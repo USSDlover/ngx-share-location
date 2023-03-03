@@ -1,3 +1,22 @@
+.mat-mdc-card-content {
+  display: grid;
+  grid-template-columns: 15rem 15rem;
+  grid-template-rows: 18rem 15rem;
+  grid-template-areas: "name-type image" "map map";
+}
+
+.location-name-type {
+  grid-area: name-type;
+}
+
+app-location-image {
+  grid-area: image;
+}
+
+app-location-map {
+  grid-area: map;
+}
+
 .mat-mdc-card-title {
   padding: 1.25rem;
   font-weight: bold;
