@@ -5076,6 +5076,13 @@ neo-async@^2.6.2:
   resolved "https://registry.yarnpkg.com/neo-async/-/neo-async-2.6.2.tgz#b4aafb93e3aeb2d8174ca53cf163ab7d7308305f"
   integrity sha512-Yd3UES5mWCSqR+qNT93S3UoYUkqAZ9lLg8a7g9rimsWmYGK8cVToA4/sF3RrshdyV3sAGMXVUmpMYOw+dLpOuw==
 
+ngx-snack-loader@^0.0.3:
+  version "0.0.3"
+  resolved "https://registry.yarnpkg.com/ngx-snack-loader/-/ngx-snack-loader-0.0.3.tgz#92b85b1e6cc0306d43cb899712dc5a7c5dbf1ab5"
+  integrity sha512-006v1ivD+l2hnBEl+rcm00w/yjsGDWAiOvPSy/k8vev5hyUB5bTM2SW9/ADLjFuBwu6qH6Poq+wcLRP277/C9w==
+  dependencies:
+    tslib "^2.3.0"
+
 nice-napi@^1.0.2:
   version "1.0.2"
   resolved "https://registry.yarnpkg.com/nice-napi/-/nice-napi-1.0.2.tgz#dc0ab5a1eac20ce548802fc5686eaa6bc654927b"

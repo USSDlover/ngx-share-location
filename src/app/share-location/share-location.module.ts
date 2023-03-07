@@ -12,6 +12,7 @@ import { FormsModule } from '@angular/forms';
 import { MatIconModule } from '@angular/material/icon';
 import { MatButtonModule } from '@angular/material/button';
 import { ShareLocationService } from './share-location.service';
+import { NgxSnackLoaderModule } from 'ngx-snack-loader';
 
 const AngularMaterialModules = [
   MatIconModule,
@@ -33,6 +34,7 @@ const AngularMaterialModules = [
     FormsModule,
     ...AngularMaterialModules,
     ShareLocationRoutingModule,
+    NgxSnackLoaderModule.forRoot()
   ],
   providers: [ShareLocationService]
 })
