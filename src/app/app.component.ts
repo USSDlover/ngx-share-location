@@ -11,7 +11,7 @@ import { Component } from '@angular/core';
     .content {
       width: 100%;
       max-width: 45rem;
-      padding: 5rem 0;
+      padding: 1.25rem 0;
       margin: 0 auto;
       display: flex;
       justify-content: center;

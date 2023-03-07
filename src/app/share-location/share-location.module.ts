@@ -11,23 +11,29 @@ import { ShareLocationRoutingModule } from './share-location-routing.module';
 import { FormsModule } from '@angular/forms';
 import { MatIconModule } from '@angular/material/icon';
 import { MatButtonModule } from '@angular/material/button';
+import { ShareLocationService } from './share-location.service';
+
+const AngularMaterialModules = [
+  MatIconModule,
+  MatCardModule,
+  MatInputModule,
+  MatSelectModule,
+  MatButtonModule
+];
 
 @NgModule({
   declarations: [
-    ShareLocationComponent,
     LocationMapComponent,
     LocationTypeComponent,
-    LocationImageComponent
+    LocationImageComponent,
+    ShareLocationComponent
   ],
   imports: [
     CommonModule,
-    MatCardModule,
-    MatInputModule,
-    MatSelectModule,
-    ShareLocationRoutingModule,
     FormsModule,
-    MatIconModule,
-    MatButtonModule
-  ]
+    ...AngularMaterialModules,
+    ShareLocationRoutingModule,
+  ],
+  providers: [ShareLocationService]
 })
 export class ShareLocationModule { }

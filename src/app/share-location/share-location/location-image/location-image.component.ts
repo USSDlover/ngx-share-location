@@ -1,15 +1,22 @@
-import { Component, EventEmitter, Input, Output } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 
 @Component({
   selector: 'app-location-image',
   templateUrl: './location-image.component.html',
   styleUrls: ['./location-image.component.scss']
 })
-export class LocationImageComponent {
+export class LocationImageComponent implements OnInit {
   @Input() locationImage?: string;
   @Output() locationImageChange = new EventEmitter<string>();
 
-  imagePreview = 'https://www.shutterstock.com/image-vector/simple-image-generator-placeholder-service-260nw-2224999997.jpg';
+  imagePreview?: string;
+
+  ngOnInit(): void {
+    if (this.locationImage)
+      this.imagePreview = this.locationImage;
+    else
+      this.imagePreview = 'https://developers.elementor.com/docs/assets/img/elementor-placeholder-image.png';
+  }
 
   onSelectFile(event: Event): void {
     let file: File | null = (event.target as HTMLInputElement).files!.item(0);
@@ -17,6 +24,9 @@ export class LocationImageComponent {
       const reader = new FileReader();
       reader.onload = () => {
         this.imagePreview = reader.result as string;
+
+        this.locationImage = this.imagePreview;
+        this.locationImageChange.emit(this.locationImage);
       }
       reader.readAsDataURL(file);
     }

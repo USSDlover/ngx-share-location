@@ -2,6 +2,9 @@
   <mat-card-title>
     Share Location
   </mat-card-title>
+  <mat-card-subtitle>
+    Please fill all the detail
+  </mat-card-subtitle>
   <mat-card-content>
     <div class="location-name-type">
       <mat-form-field appearance="outline">
@@ -10,16 +13,19 @@
         </mat-label>
         <input [(ngModel)]="locationName" matInput />
       </mat-form-field>
-      <app-location-type></app-location-type>
+      <app-location-type
+        [(selectedLocationType)]="locationType"
+      ></app-location-type>
     </div>
-    <app-location-image></app-location-image>
-    <app-location-map></app-location-map>
+    <app-location-image
+      [(locationImage)]="locationImage"
+    ></app-location-image>
+    <app-location-map
+      [(locationLatLng)]="locationLatLng"
+    ></app-location-map>
   </mat-card-content>
   <mat-card-actions>
-    <button mat-raised-button>
-      Cancel
-    </button>
-    <button mat-raised-button color="primary">
+    <button [disabled]="invalidForm()" (click)="onSubmit()" mat-raised-button color="primary">
       Save
     </button>
   </mat-card-actions>
